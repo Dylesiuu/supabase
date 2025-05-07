@@ -79,7 +79,9 @@ services:
 
   auth:
     container_name: supabase-auth
-    image: supabase/gotrue:v2.171.0
+    image: gotrue-dev
+    ports:
+      - 9999:9999
     restart: unless-stopped
     healthcheck:
       test:
